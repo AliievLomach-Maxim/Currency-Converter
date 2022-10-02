@@ -1,0 +1,20 @@
+@import '~antd/dist/antd.dark.less';
+
+.prop-text::after {
+	content: 'Currency Converter';
+	text-align: 'center';
+}
+@media (max-width: 768px) {
+	.prop-text::after {
+		content: 'Convert';
+	}
+}
+.example {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform: -webkit-translate(-50%, -50%);
+	transform: -moz-translate(-50%, -50%);
+	transform: -ms-translate(-50%, -50%);
+}
