@@ -1,0 +1,22 @@
+{
+	"header": {
+		"main": "Currency Converter"
+	},
+	"footer": {
+		"main": "Created by Maxim Aliev-Lomach"
+	},
+	"button": {
+		"BackHome": "Back Home"
+	},
+	"errors": {
+		"404": {
+			"text": "Sorry, we couldn`t find that page."
+		},
+		"429": {
+			"text": "You have exceeded your daily/monthly API rate limit. Please review and upgrade your subscription plan to continue."
+		},
+		"some": {
+			"text": "Sorry, there are server problems, please wait 1-5 minutes and reload the page."
+		}
+	}
+}
