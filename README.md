@@ -1,10 +1,10 @@
-### You mast use yarn!
+### You must use yarn!
 
 ## execute the command:
 
 `yarn install`
 
-### next step, you mast create .env file
+### next step, you must create .env file
 
 ## add 2 keys in env:
 
