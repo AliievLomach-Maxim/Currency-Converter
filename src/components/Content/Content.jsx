@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Form, Select, Row, Input, Col, Typography, Card } from 'antd'
+import { Form, Select, Row, Input, Col, Typography, Card, Spin } from 'antd'
 import {
 	getConvert,
 	getEUR,
@@ -141,22 +141,16 @@ const Bookings = () => {
 			})
 			setData(data)
 		}
-	}, [periodUSD])
+	}, [periodUSD, periodEUR])
 
-	const config = {
-		data: data && data,
-		isGroup: true,
-		height: 200,
-		xField: 'year',
-		yField: 'value',
-		seriesField: 'name',
-		dodgePadding: 2,
-		intervalPadding: 20,
-	}
-	
+	useEffect(() => {
+		if (data) {
+		}
+	}, [data])
+
 	return (
 		!loading &&
-		data && (
+		(data ? (
 			<>
 				<Row justify='center' style={{ padding: 14 }}>
 					<Col style={{ padding: 14 }} xs={{ span: 24 }} sm={{ span: 20 }}>
@@ -176,7 +170,16 @@ const Bookings = () => {
 								width: '100%',
 							}}
 						>
-							<Column {...config} />
+							<Column
+								data={data}
+								isGroup={true}
+								height={200}
+								xField='year'
+								yField='value'
+								seriesField='name'
+								dodgePadding={2}
+								intervalPadding={20}
+							/>
 						</Card>
 					</Col>
 				</Row>
@@ -219,7 +222,9 @@ const Bookings = () => {
 					</Form>
 				</Row>
 			</>
-		)
+		) : (
+			<Spin className='example' size='large' />
+		))
 	)
 }
 
