@@ -1,4 +1,3 @@
-######Hosting URL: https://convertitore-di-valuta.web.app
 
 ### You must use yarn!
 
